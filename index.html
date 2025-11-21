@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ガラケー風デモ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="phone">
+      <div id="screen">
+        <div id="screen-inner">
+          <p>ガラケー風デモ画面です。</p>
+          <p>十字キーの「↑」「↓」ボタンで、このテキストを少しスクロールします。</p>
+          <p>当時の低解像度っぽく、画面は小さめにしています。</p>
+          <p>ここにメニューやテキストを増やしていけば、簡単なUIが作れます。</p>
+          <p>スクロールテスト用のダミーテキストです。</p>
+          <p>スクロールテスト用のダミーテキストです。</p>
+          <p>スクロールテスト用のダミーテキストです。</p>
+          <p>スクロールテスト用のダミーテキストです。</p>
+        </div>
+      </div>
+
+      <div id="keypad">
+        <!-- ソフトキー行 -->
+        <div class="row softkeys">
+          <button class="key">戻る</button>
+          <button class="key">iモード</button>
+          <button class="key">メール</button>
+          <button class="key">メニュー</button>
+        </div>
+
+        <!-- 十字キー＋決定 -->
+        <div class="row dpad-row">
+          <div class="dpad">
+            <button class="key small" data-action="up">↑</button>
+            <div class="middle-row">
+              <button class="key small" data-action="left">←</button>
+              <button class="key small main" data-action="ok">決定</button>
+              <button class="key small" data-action="right">→</button>
+            </div>
+            <button class="key small" data-action="down">↓</button>
+          </div>
+        </div>
+
+        <!-- 数字キー -->
+        <div class="row numkeys">
+          <button class="key">1</button>
+          <button class="key">2</button>
+          <button class="key">3</button>
+
+          <button class="key">4</button>
+          <button class="key">5</button>
+          <button class="key">6</button>
+
+          <button class="key">7</button>
+          <button class="key">8</button>
+          <button class="key">9</button>
+
+          <button class="key">*</button>
+          <button class="key">0</button>
+          <button class="key">#</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

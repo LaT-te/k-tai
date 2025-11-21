@@ -1,0 +1,127 @@
+/* 全体レイアウト */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Yu Gothic", sans-serif;
+}
+
+/* 本体枠（スマホ画面に収まるよう縦長） */
+#phone {
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  max-height: 900px;
+  background: #f4f4f4;
+  border-radius: 24px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* 上部の小さい画面 */
+#screen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 4px 8px;
+  box-sizing: border-box;
+}
+
+/* 実際の「液晶」部分（小さめ） */
+#screen-inner {
+  width: 220px;
+  height: 140px;
+  background: #d0f0ff;
+  border: 3px solid #0066aa;
+  border-radius: 6px;
+  padding: 4px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+/* 下部キーエリア */
+#keypad {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+/* 行共通 */
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ソフトキーは横並び */
+.softkeys .key {
+  flex: 1;
+}
+
+/* 十字キーエリア */
+.dpad-row {
+  justify-content: center;
+}
+
+.dpad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.dpad .middle-row {
+  display: flex;
+  gap: 4px;
+}
+
+/* 数字キーは 3 列 */
+.numkeys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+/* キー共通スタイル */
+.key {
+  border: 1px solid #999;
+  background: #fff;
+  border-radius: 6px;
+  padding: 6px 4px;
+  font-size: 12px;
+  text-align: center;
+  box-shadow: 0 2px 0 #bbb;
+}
+
+.key.small {
+  width: 40px;
+}
+
+.key.main {
+  background: #ffcc33;
+}
+
+/* クリックした感じ */
+.key:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
